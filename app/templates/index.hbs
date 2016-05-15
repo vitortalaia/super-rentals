@@ -7,12 +7,8 @@
   consequat.
 </p>
 
-{{#each model as |rental|}}
-  <h3>{{rental.title}}</h3>
-  <p>Owner: {{rental.owner}}</p>
-  <p>Type: {{rental.type}}</p>
-  <p>Location: {{rental.city}}</p>
-  <p>Number of bedrooms: {{rental.bedrooms}}</p>
+{{#each model as |rentalUnit|}}
+  {{rental-listing rental=rentalUnit}}
 {{/each}}
 
 {{#link-to 'about'}}About{{/link-to}}

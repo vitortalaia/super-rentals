@@ -1,0 +1,15 @@
+<h3>{{rental.title}}</h3>
+<p>Owner: {{rental.owner}}</p>
+<p>Type: {{rental.type}}</p>
+<p>Location: {{rental.city}}</p>
+<p>Number of bedrooms: {{rental.bedrooms}}</p>
+
+{{#if isImageShowing}}
+  <button {{action 'toggleImage'}}>Hide image</button>
+
+  <p>
+    <img src={{rental.image}} alt={{rental.type}} width="500">
+  </p>
+{{else}}
+  <button {{action 'toggleImage'}}>Show image</button>
+{{/if}}
